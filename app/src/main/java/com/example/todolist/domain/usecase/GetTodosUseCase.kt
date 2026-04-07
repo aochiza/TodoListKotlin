@@ -7,5 +7,5 @@ import kotlinx.coroutines.flow.Flow
 class GetTodosUseCase(
     private val repository: TodoRepository
 ) {
-    operator fun invoke(): Flow<List<TodoItem>> = repository.getTodos()  // Убираем suspend
+    operator fun invoke(): Flow<List<TodoItem>> = repository.getTodos()
 }

@@ -1,4 +1,3 @@
-// AddTodoUseCase.kt
 package com.example.todolist.domain.usecase
 
 import com.example.todolist.domain.model.TodoItem

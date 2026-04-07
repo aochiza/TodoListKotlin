@@ -57,7 +57,6 @@ class TodoRepositoryImpl(
     }
 }
 
-// Extension functions
 fun TodoItem.toEntity(): TodoEntity {
     return TodoEntity(
         id = id,

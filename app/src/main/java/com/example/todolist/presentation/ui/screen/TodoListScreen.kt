@@ -140,8 +140,6 @@ fun TodoListScreen(
             }
         }
     }
-
-    // Диалог добавления задачи
     if (showAddDialog) {
         AlertDialog(
             onDismissRequest = { showAddDialog = false },

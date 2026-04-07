@@ -37,8 +37,8 @@ class TodoViewModel(
     }
 
     fun loadTodos() {
-        Log.d("TodoViewModel", "loadTodos called")  // Добавьте
-        viewModelScope.launch(Dispatchers.IO) {  // Явно указываем IO поток
+        Log.d("TodoViewModel", "loadTodos called")
+        viewModelScope.launch(Dispatchers.IO) {
             try {
                 withContext(Dispatchers.Main) {
                     _isLoading.value = true

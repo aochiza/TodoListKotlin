@@ -6,5 +6,5 @@ import kotlinx.coroutines.flow.Flow
 class GetCompletedColorEnabledUseCase(
     private val repository: TodoRepository
 ) {
-    operator fun invoke(): Flow<Boolean> = repository.isCompletedColorEnabled()  // Убираем suspend
+    operator fun invoke(): Flow<Boolean> = repository.isCompletedColorEnabled()
 }

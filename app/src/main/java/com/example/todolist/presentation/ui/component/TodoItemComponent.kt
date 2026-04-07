@@ -35,7 +35,7 @@ fun TodoItemComponent(
         shape = RoundedCornerShape(16.dp),  // Более скругленные углы
         colors = CardDefaults.cardColors(
             containerColor = if (completedColorEnabled && todo.isCompleted) {
-                CompletedTaskBg  // Цвет для выполненных задач
+                CompletedTaskBg
             } else {
                 MaterialTheme.colorScheme.surfaceVariant
             }
@@ -55,7 +55,6 @@ fun TodoItemComponent(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
-            // Левая часть с чекбоксом и текстом
             Row(
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier.weight(1f)
@@ -98,8 +97,6 @@ fun TodoItemComponent(
                     }
                 }
             }
-
-            // Правая часть с кнопками
             Row(
                 horizontalArrangement = Arrangement.spacedBy(4.dp)
             ) {

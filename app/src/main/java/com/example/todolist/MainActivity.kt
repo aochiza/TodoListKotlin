@@ -28,10 +28,10 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        Log.d("MainActivity", "onCreate started")  // Добавьте
+        Log.d("MainActivity", "onCreate started")
 
         setContent {
-            Log.d("MainActivity", "Setting content")  // Добавьте
+            Log.d("MainActivity", "Setting content")
             TodoListApp()
         }
     }
@@ -41,12 +41,10 @@ class MainActivity : ComponentActivity() {
 fun TodoListApp() {
     val context = androidx.compose.ui.platform.LocalContext.current
 
-    // Initialize database and preferences
     val database = remember { TodoDatabase.getDatabase(context) }
     val preferencesManager = remember { PreferencesManager(context) }
     val repository = remember { TodoRepositoryImpl(database.todoDao(), preferencesManager) }
 
-    // Initialize use cases
     val getTodosUseCase = remember { GetTodosUseCase(repository) }
     val getTodoByIdUseCase = remember { GetTodoByIdUseCase(repository) }
     val addTodoUseCase = remember { AddTodoUseCase(repository) }
@@ -71,7 +69,6 @@ fun TodoListApp() {
         )
     }
 
-    // Import initial data from JSON only once
     LaunchedEffect(Unit) {
         val todos = repository.getTodos().first()
         if (todos.isEmpty()) {

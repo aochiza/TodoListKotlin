@@ -119,8 +119,6 @@ fun TodoDetailScreen(
             }
         }
     }
-
-    // Edit dialog
     if (showEditDialog && todo != null) {
         AlertDialog(
             onDismissRequest = { showEditDialog = false },
