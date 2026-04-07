@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Купить молоко",
+    "description": "2 литра, обезжиренное",
+    "isCompleted": false
+  },
+  {
+    "id": 2,
+    "title": "Позвонить маме",
+    "description": "Спросить про выходные",
+    "isCompleted": true
+  },
+  {
+    "id": 3,
+    "title": "Сделать ДЗ по СИПИ",
+    "description": "Сделать 2 блок",
+    "isCompleted": false
+  },
+  {
+    "id": 4,
+    "title": "Поспать",
+    "description": "Не забыть закрыть дверь на ключ",
+    "isCompleted": false
+  },
+  {
+    "id": 5,
+    "title": "Прочитать книгу",
+    "description": "Clean Code",
+    "isCompleted": true
+  }
+]
